@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="51154" started-at="2019-03-07T09:54:03Z" finished-at="2019-03-07T09:54:54Z">
+    <groups>
+    </groups>
+    <test name="ChromeTest" duration-ms="38045" started-at="2019-03-07T09:54:03Z" finished-at="2019-03-07T09:54:41Z">
+      <class name="WebPage.HomePageTest">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:WebPage.HomePageTest@482f8f11]" name="beforeTest" is-config="true" duration-ms="5273" started-at="2019-03-07T04:54:03Z" finished-at="2019-03-07T04:54:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="VerifyHomePageLinks()[pri:0, instance:WebPage.HomePageTest@482f8f11]" name="VerifyHomePageLinks" duration-ms="32708" started-at="2019-03-07T04:54:08Z" finished-at="2019-03-07T04:54:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyHomePageLinks -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:WebPage.HomePageTest@482f8f11]" name="afterTest" is-config="true" duration-ms="56" started-at="2019-03-07T04:54:40Z" finished-at="2019-03-07T04:54:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- WebPage.HomePageTest -->
+    </test> <!-- ChromeTest -->
+    <test name="IETest" duration-ms="40337" started-at="2019-03-07T09:54:03Z" finished-at="2019-03-07T09:54:43Z">
+      <class name="WebPage.HomePageTest">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:WebPage.HomePageTest@573f2bb1]" name="beforeTest" is-config="true" duration-ms="3566" started-at="2019-03-07T04:54:03Z" finished-at="2019-03-07T04:54:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ie]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="VerifyHomePageLinks()[pri:0, instance:WebPage.HomePageTest@573f2bb1]" name="VerifyHomePageLinks" duration-ms="36743" started-at="2019-03-07T04:54:06Z" finished-at="2019-03-07T04:54:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyHomePageLinks -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:WebPage.HomePageTest@573f2bb1]" name="afterTest" is-config="true" duration-ms="14" started-at="2019-03-07T04:54:43Z" finished-at="2019-03-07T04:54:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- WebPage.HomePageTest -->
+    </test> <!-- IETest -->
+    <test name="firefoxTest" duration-ms="51154" started-at="2019-03-07T09:54:03Z" finished-at="2019-03-07T09:54:54Z">
+      <class name="WebPage.HomePageTest">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:WebPage.HomePageTest@39aeed2f]" name="beforeTest" is-config="true" duration-ms="11504" started-at="2019-03-07T04:54:03Z" finished-at="2019-03-07T04:54:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="VerifyHomePageLinks()[pri:0, instance:WebPage.HomePageTest@39aeed2f]" name="VerifyHomePageLinks" duration-ms="38635" started-at="2019-03-07T04:54:14Z" finished-at="2019-03-07T04:54:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyHomePageLinks -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:WebPage.HomePageTest@39aeed2f]" name="afterTest" is-config="true" duration-ms="1008" started-at="2019-03-07T04:54:53Z" finished-at="2019-03-07T04:54:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- WebPage.HomePageTest -->
+    </test> <!-- firefoxTest -->
+  </suite> <!-- Suite -->
+</testng-results>

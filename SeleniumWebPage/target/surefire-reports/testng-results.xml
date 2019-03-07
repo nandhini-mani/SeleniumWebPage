@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="18785" started-at="2019-03-07T09:45:03Z" finished-at="2019-03-07T09:45:22Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="18785" started-at="2019-03-07T09:45:03Z" finished-at="2019-03-07T09:45:22Z">
+      <class name="WebPage.HomePageTest">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:WebPage.HomePageTest@7e0ea639]" name="beforeTest" is-config="true" duration-ms="12790" started-at="2019-03-07T04:45:03Z" finished-at="2019-03-07T04:45:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ie]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="VerifyHomePageLinks()[pri:0, instance:WebPage.HomePageTest@7e0ea639]" name="VerifyHomePageLinks" duration-ms="5866" started-at="2019-03-07T04:45:16Z" finished-at="2019-03-07T04:45:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyHomePageLinks -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:WebPage.HomePageTest@7e0ea639]" name="afterTest" is-config="true" duration-ms="119" started-at="2019-03-07T04:45:22Z" finished-at="2019-03-07T04:45:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- WebPage.HomePageTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
