@@ -31,28 +31,102 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">ChromeTest</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">38.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
-<tr class="stripe"><td style="text-align:left;padding-right:2em">IETest</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">40.3 seconds</td><td class="numi"></td><td class="numi"></td></tr>
-<tr><td style="text-align:left;padding-right:2em">firefoxTest</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">51.2 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">ChromeTest</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">96.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em">firefoxTest</td><td class="numi">2</td><td class="numi">2</td><td class="numi">0</td><td class="numi">0</td><td class="numi">104.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">IETest</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">108.3 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 <tr class="total"><td>Total</td>
-<td class="numi">3</td><td class="numi">3</td><td class="numi">0</td><td class="numi">0</td><td class="numi">51.2 seconds</td><td colspan="2">&nbsp;</td></tr>
+<td class="numi">4</td><td class="numi">4</td><td class="numi">0</td><td class="numi_attn">2</td><td class="numi">108.3 seconds</td><td colspan="2">&nbsp;</td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr><th colspan="4">ChromeTest &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">WebPage.HomePageTest</td><td><a href="#m1"><b>VerifySearchOption</b>  </a></td><td class="numi">1</td><td>1552198046760</td><td class="numi">6477</td></tr>
 <tr><th colspan="4">ChromeTest &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="1">WebPage.HomePageTest</td><td><a href="#m1"><b>VerifyHomePageLinks</b>  </a></td><td class="numi">1</td><td>1551952448279</td><td class="numi">32708</td></tr>
-<tr><th colspan="4">IETest &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="1">WebPage.HomePageTest</td><td><a href="#m2"><b>VerifyHomePageLinks</b>  </a></td><td class="numi">1</td><td>1551952446579</td><td class="numi">36743</td></tr>
+<tr class="passedodd"><td rowspan="1">WebPage.HomePageTest</td><td><a href="#m2"><b>VerifyHomePageLinks</b>  </a></td><td class="numi">1</td><td>1552197973681</td><td class="numi">73077</td></tr>
 <tr><th colspan="4">firefoxTest &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="1">WebPage.HomePageTest</td><td><a href="#m3"><b>VerifyHomePageLinks</b>  </a></td><td class="numi">1</td><td>1551952454509</td><td class="numi">38635</td></tr>
+<tr class="passedodd"><td rowspan="2">WebPage.HomePageTest</td><td><a href="#m3"><b>VerifyHomePageLinks</b>  </a></td><td class="numi">1</td><td>1552197962959</td><td class="numi">86097</td></tr><tr class="passedodd"><td><a href="#m4"><b>VerifySearchOption</b>  </a></td><td class="numi">1</td><td>1552198049061</td><td class="numi">6527</td></tr>
+<tr><th colspan="4">IETest &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">WebPage.HomePageTest</td><td><a href="#m5"><b>VerifySearchOption</b>  </a></td><td class="numi">1</td><td>1552198054518</td><td class="numi">10895</td></tr>
+<tr><th colspan="4">IETest &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="1">WebPage.HomePageTest</td><td><a href="#m6"><b>VerifyHomePageLinks</b>  </a></td><td class="numi">1</td><td>1552197971617</td><td class="numi">82898</td></tr>
 </table>
 <h1>ChromeTest</h1>
-<h2 id="m1">WebPage.HomePageTest:VerifyHomePageLinks</h2>
+<h2 id="m1">WebPage.HomePageTest:VerifySearchOption</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>firefox</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>no such alert
+  (Session info: chrome=72.0.3626.119)
+  (Driver info: chromedriver=72.0.3626.69 (3c16f8a135abc0d4da2dff33804db79b849a7c38),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;NAVIN790&apos;, ip: &apos;192.168.43.140&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 72.0.3626.69 (3c16f8a135abc..., userDataDir: C:\Users\Navin\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:50094}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 72.0.3626.119, webStorageEnabled: true}
+Session ID: ae567cbefdfe12d6dd88d959d5770384</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+<br/>at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+<br/>at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:932)
+<br/>at WebPage.HomePageTest.VerifySearchOption(HomePageTest.java:91)
+<br/>21 lines not shown
+</td></tr>
+</table>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h1>IETest</h1>
 <h2 id="m2">WebPage.HomePageTest:VerifyHomePageLinks</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 <h1>firefoxTest</h1>
 <h2 id="m3">WebPage.HomePageTest:VerifyHomePageLinks</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">WebPage.HomePageTest:VerifySearchOption</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>firefox</td>
+</tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>IETest</h1>
+<h2 id="m5">WebPage.HomePageTest:VerifySearchOption</h2>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr class="param"><th>Parameter #1</th></tr>
+<tr class="param stripe"><td>firefox</td>
+</tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>No alert is active
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;NAVIN790&apos;, ip: &apos;192.168.43.140&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities {acceptInsecureCerts: false, browserName: internet explorer, browserVersion: 11, javascriptEnabled: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:ieOptions: {browserAttachTimeout: 0, elementScrollBehavior: 0, enablePersistentHover: true, ie.browserCommandLineSwitches: , ie.ensureCleanSession: false, ie.fileUploadDialogTimeout: 3000, ie.forceCreateProcessApi: false, ignoreProtectedModeSettings: false, ignoreZoomSetting: false, initialBrowserUrl: http://localhost:32453/, nativeEvents: true, requireWindowFocus: false}, setWindowRect: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: f9ee6190-08aa-4ee1-83f8-c53bb23d7329</p>
+sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:932)
+<br/>at WebPage.HomePageTest.VerifySearchOption(HomePageTest.java:91)
+<br/>21 lines not shown
+</td></tr>
+</table>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">WebPage.HomePageTest:VerifyHomePageLinks</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

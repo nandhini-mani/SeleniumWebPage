@@ -1,16 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]">
+<suite name="Failed suite [Suite]" parallel="tests">
   <parameter name="browser" value="firefox"/>
-  <test name="Test(failed)">
+  <test name="ChromeTest(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="WebPage.HomePageTest">
+        <parameter name="browser" value="firefox"/>
         <methods>
+          <include name="VerifySearchOption" invocation-numbers="0"/>
           <include name="beforeTest"/>
-          <include name="VerifyHomePageLinks"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
           <include name="afterTest"/>
         </methods>
       </class> <!-- WebPage.HomePageTest -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- ChromeTest(failed) -->
+  <test name="IETest(failed)" parallel="tests">
+    <parameter name="browser" value="ie"/>
+    <classes>
+      <class name="WebPage.HomePageTest">
+        <parameter name="browser" value="firefox"/>
+        <methods>
+          <include name="VerifySearchOption" invocation-numbers="0"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- WebPage.HomePageTest -->
+    </classes>
+  </test> <!-- IETest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -11,27 +11,32 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Iterator;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 
 public class HomePageTest {
 	public WebDriver driver;
-	 
+	
+/*
+ * Test case 1 : To verify the hyperlinks present in Selenium Home page	 
+ */
 	@Test(priority=0)
   public void VerifyHomePageLinks(){
 		String url ="";
 		driver.get("https://www.seleniumhq.org/");
 		HttpURLConnection huc = null;
         int respCode = 200;
-	  List<WebElement> links = driver.findElements(By.tagName("a"));
-      
-      Iterator<WebElement> it = links.iterator();
+        List<WebElement> links = driver.findElements(By.tagName("a"));
+        Iterator<WebElement> it = links.iterator();
       
       while(it.hasNext()){
           
@@ -74,7 +79,28 @@ System.out.println("URL is either not configured for anchor tag or it is empty")
           }
   }
 	}
-
+/* Test case 2 : To verfiy the search option on top right corner of Selenium Webpage
+ */
+	@Test(priority=1)
+	 @Parameters("browser") 
+	public void VerifySearchOption(String browser) throws InterruptedException{
+		driver.get("https://www.seleniumhq.org/");
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
+		driver.findElement(By.id("q")).sendKeys("Webdriver");
+		System.out.println("Entered Webdriver in search option");
+		driver.findElement(By.xpath(".//input[@value='Go']")).click();
+		if(browser.equalsIgnoreCase("firefox")){
+			System.out.println("Handling alert message present in firefox browser");
+			Alert alert = driver.switchTo().alert();
+			alert.accept();
+			System.out.println("Accepted alert message");
+		}
+		Thread.sleep(5000);
+		String expectedTitle = "Google Custom Search";
+		String actualTitle = driver.getTitle();
+		Assert.assertEquals(actualTitle, expectedTitle);
+		
+	}
 	
   @BeforeTest
   @Parameters("browser") 
