@@ -2,80 +2,12 @@
 <testng-results skipped="0" failed="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="70186" started-at="2019-03-10T06:11:20Z" finished-at="2019-03-10T06:12:30Z">
+  <suite name="Suite" duration-ms="56879" started-at="2019-03-13T15:13:12Z" finished-at="2019-03-13T15:14:09Z">
     <groups>
     </groups>
-    <test name="IETest" duration-ms="47560" started-at="2019-03-10T06:11:20Z" finished-at="2019-03-10T06:12:08Z">
+    <test name="ChromeTest" duration-ms="45862" started-at="2019-03-13T15:13:12Z" finished-at="2019-03-13T15:13:58Z">
       <class name="WebPage.HomePageTest">
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:WebPage.HomePageTest@7e0ea639]" name="beforeTest" is-config="true" duration-ms="4218" started-at="2019-03-10T01:11:20Z" finished-at="2019-03-10T01:11:24Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[ie]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="VerifyHomePageLinks()[pri:0, instance:WebPage.HomePageTest@7e0ea639]" name="VerifyHomePageLinks" duration-ms="31285" started-at="2019-03-10T01:11:24Z" finished-at="2019-03-10T01:11:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyHomePageLinks -->
-        <test-method status="PASS" signature="VerifySearchOption(java.lang.String)[pri:0, instance:WebPage.HomePageTest@7e0ea639]" name="VerifySearchOption" duration-ms="11932" started-at="2019-03-10T01:11:56Z" finished-at="2019-03-10T01:12:08Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[ie]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifySearchOption -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:WebPage.HomePageTest@7e0ea639]" name="afterTest" is-config="true" duration-ms="122" started-at="2019-03-10T01:12:08Z" finished-at="2019-03-10T01:12:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- WebPage.HomePageTest -->
-    </test> <!-- IETest -->
-    <test name="firefoxTest" duration-ms="62138" started-at="2019-03-10T06:11:20Z" finished-at="2019-03-10T06:12:22Z">
-      <class name="WebPage.HomePageTest">
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:WebPage.HomePageTest@13fee20c]" name="beforeTest" is-config="true" duration-ms="25408" started-at="2019-03-10T01:11:20Z" finished-at="2019-03-10T01:11:46Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="VerifyHomePageLinks()[pri:0, instance:WebPage.HomePageTest@13fee20c]" name="VerifyHomePageLinks" duration-ms="28175" started-at="2019-03-10T01:11:46Z" finished-at="2019-03-10T01:12:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifyHomePageLinks -->
-        <test-method status="PASS" signature="VerifySearchOption(java.lang.String)[pri:0, instance:WebPage.HomePageTest@13fee20c]" name="VerifySearchOption" duration-ms="6672" started-at="2019-03-10T01:12:14Z" finished-at="2019-03-10T01:12:20Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- VerifySearchOption -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:WebPage.HomePageTest@13fee20c]" name="afterTest" is-config="true" duration-ms="1882" started-at="2019-03-10T01:12:20Z" finished-at="2019-03-10T01:12:22Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- WebPage.HomePageTest -->
-    </test> <!-- firefoxTest -->
-    <test name="ChromeTest" duration-ms="70186" started-at="2019-03-10T06:11:20Z" finished-at="2019-03-10T06:12:30Z">
-      <class name="WebPage.HomePageTest">
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:WebPage.HomePageTest@dfd3711]" name="beforeTest" is-config="true" duration-ms="4139" started-at="2019-03-10T01:11:20Z" finished-at="2019-03-10T01:11:24Z">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:WebPage.HomePageTest@26ba2a48]" name="beforeTest" is-config="true" duration-ms="5471" started-at="2019-03-13T11:13:12Z" finished-at="2019-03-13T11:13:18Z">
           <params>
             <param index="0">
               <value>
@@ -86,11 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="VerifyHomePageLinks()[pri:0, instance:WebPage.HomePageTest@dfd3711]" name="VerifyHomePageLinks" duration-ms="56289" started-at="2019-03-10T01:11:24Z" finished-at="2019-03-10T01:12:21Z">
+        <test-method status="PASS" signature="VerifyHomePageLinks()[pri:0, instance:WebPage.HomePageTest@26ba2a48]" name="VerifyHomePageLinks" duration-ms="29966" started-at="2019-03-13T11:13:18Z" finished-at="2019-03-13T11:13:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifyHomePageLinks -->
-        <test-method status="PASS" signature="VerifySearchOption(java.lang.String)[pri:0, instance:WebPage.HomePageTest@dfd3711]" name="VerifySearchOption" duration-ms="9639" started-at="2019-03-10T01:12:21Z" finished-at="2019-03-10T01:12:30Z">
+        <test-method status="PASS" signature="VerifySearchOption(java.lang.String)[pri:0, instance:WebPage.HomePageTest@26ba2a48]" name="VerifySearchOption" duration-ms="10340" started-at="2019-03-13T11:13:48Z" finished-at="2019-03-13T11:13:58Z">
           <params>
             <param index="0">
               <value>
@@ -101,11 +33,79 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- VerifySearchOption -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:WebPage.HomePageTest@dfd3711]" name="afterTest" is-config="true" duration-ms="104" started-at="2019-03-10T01:12:30Z" finished-at="2019-03-10T01:12:30Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:WebPage.HomePageTest@26ba2a48]" name="afterTest" is-config="true" duration-ms="77" started-at="2019-03-13T11:13:58Z" finished-at="2019-03-13T11:13:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- WebPage.HomePageTest -->
     </test> <!-- ChromeTest -->
+    <test name="IETest" duration-ms="48554" started-at="2019-03-13T15:13:12Z" finished-at="2019-03-13T15:14:01Z">
+      <class name="WebPage.HomePageTest">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:WebPage.HomePageTest@59a6e353]" name="beforeTest" is-config="true" duration-ms="6657" started-at="2019-03-13T11:13:12Z" finished-at="2019-03-13T11:13:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ie]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="VerifyHomePageLinks()[pri:0, instance:WebPage.HomePageTest@59a6e353]" name="VerifyHomePageLinks" duration-ms="33017" started-at="2019-03-13T11:13:19Z" finished-at="2019-03-13T11:13:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyHomePageLinks -->
+        <test-method status="PASS" signature="VerifySearchOption(java.lang.String)[pri:0, instance:WebPage.HomePageTest@59a6e353]" name="VerifySearchOption" duration-ms="8865" started-at="2019-03-13T11:13:52Z" finished-at="2019-03-13T11:14:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ie]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifySearchOption -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:WebPage.HomePageTest@59a6e353]" name="afterTest" is-config="true" duration-ms="13" started-at="2019-03-13T11:14:01Z" finished-at="2019-03-13T11:14:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- WebPage.HomePageTest -->
+    </test> <!-- IETest -->
+    <test name="firefoxTest" duration-ms="56879" started-at="2019-03-13T15:13:12Z" finished-at="2019-03-13T15:14:09Z">
+      <class name="WebPage.HomePageTest">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:WebPage.HomePageTest@783e6358]" name="beforeTest" is-config="true" duration-ms="20388" started-at="2019-03-13T11:13:12Z" finished-at="2019-03-13T11:13:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="VerifyHomePageLinks()[pri:0, instance:WebPage.HomePageTest@783e6358]" name="VerifyHomePageLinks" duration-ms="29532" started-at="2019-03-13T11:13:33Z" finished-at="2019-03-13T11:14:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyHomePageLinks -->
+        <test-method status="PASS" signature="VerifySearchOption(java.lang.String)[pri:0, instance:WebPage.HomePageTest@783e6358]" name="VerifySearchOption" duration-ms="6143" started-at="2019-03-13T11:14:02Z" finished-at="2019-03-13T11:14:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifySearchOption -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:WebPage.HomePageTest@783e6358]" name="afterTest" is-config="true" duration-ms="812" started-at="2019-03-13T11:14:08Z" finished-at="2019-03-13T11:14:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- WebPage.HomePageTest -->
+    </test> <!-- firefoxTest -->
   </suite> <!-- Suite -->
 </testng-results>

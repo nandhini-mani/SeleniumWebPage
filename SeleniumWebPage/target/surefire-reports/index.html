@@ -116,17 +116,17 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="WebPage.HomePageTest" hash-for-method="VerifySearchOption(chrome)">VerifySearchOption(chrome)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="WebPage.HomePageTest" hash-for-method="VerifySearchOption(ie)">VerifySearchOption(ie)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="WebPage.HomePageTest" hash-for-method="VerifySearchOption(firefox)">VerifySearchOption(firefox)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="WebPage.HomePageTest" hash-for-method="VerifySearchOption(chrome)">VerifySearchOption(chrome)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -170,6 +170,14 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="VerifySearchOption(chrome)">
+                  </a> <!-- VerifySearchOption(chrome) -->
+                  <span class="method-name">VerifySearchOption</span>
+                  <span class="parameters">(chrome)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="VerifySearchOption(ie)">
                   </a> <!-- VerifySearchOption(ie) -->
                   <span class="method-name">VerifySearchOption</span>
@@ -184,14 +192,6 @@
                   <span class="parameters">(firefox)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="VerifySearchOption(chrome)">
-                  </a> <!-- VerifySearchOption(chrome) -->
-                  <span class="method-name">VerifySearchOption</span>
-                  <span class="parameters">(chrome)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
@@ -203,7 +203,7 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite verbose=&quot;0&quot; name=&quot;Suite&quot; parallel=&quot;tests&quot;&gt;
+&lt;suite thread-count=&quot;3&quot; verbose=&quot;0&quot; name=&quot;Suite&quot; parallel=&quot;tests&quot;&gt;
   &lt;test name=&quot;IETest&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;ie&quot;/&gt;
     &lt;classes&gt;
@@ -275,32 +275,32 @@ data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'VerifyHomePageLinks')
 data.setCell(0, 2, 'WebPage.HomePageTest')
-data.setCell(0, 3, 56289);
+data.setCell(0, 3, 33017);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'VerifyHomePageLinks')
 data.setCell(1, 2, 'WebPage.HomePageTest')
-data.setCell(1, 3, 31285);
+data.setCell(1, 3, 29966);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'VerifyHomePageLinks')
 data.setCell(2, 2, 'WebPage.HomePageTest')
-data.setCell(2, 3, 28175);
+data.setCell(2, 3, 29532);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'VerifySearchOption')
 data.setCell(3, 2, 'WebPage.HomePageTest')
-data.setCell(3, 3, 11932);
+data.setCell(3, 3, 10340);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'VerifySearchOption')
 data.setCell(4, 2, 'WebPage.HomePageTest')
-data.setCell(4, 3, 9639);
+data.setCell(4, 3, 8865);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'VerifySearchOption')
 data.setCell(5, 2, 'WebPage.HomePageTest')
-data.setCell(5, 3, 6672);
+data.setCell(5, 3, 6143);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -332,48 +332,48 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-test before">
-                <span class="method-name">beforeTest(chrome)</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-test before -->
-              <div class="configuration-test before">
                 <span class="method-name">beforeTest(ie)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeTest(chrome)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">VerifyHomePageLinks</span>
-                <span class="method-start">4151 ms</span>
+                <span class="method-start">5478 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">VerifyHomePageLinks</span>
-                <span class="method-start">4219 ms</span>
+                <span class="method-start">6658 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">VerifyHomePageLinks</span>
-                <span class="method-start">25408 ms</span>
+                <span class="method-start">20388 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">VerifySearchOption(chrome)</span>
+                <span class="method-start">35444 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">VerifySearchOption(ie)</span>
-                <span class="method-start">35504 ms</span>
+                <span class="method-start">39675 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">47437 ms</span>
+                <span class="method-start">45784 ms</span>
+              </div> <!-- configuration-test after -->
+              <div class="configuration-test after">
+                <span class="method-name">afterTest</span>
+                <span class="method-start">48540 ms</span>
               </div> <!-- configuration-test after -->
               <div class="test-method">
                 <span class="method-name">VerifySearchOption(firefox)</span>
-                <span class="method-start">53583 ms</span>
+                <span class="method-start">49923 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">60255 ms</span>
-              </div> <!-- configuration-test after -->
-              <div class="test-method">
-                <span class="method-name">VerifySearchOption(chrome)</span>
-                <span class="method-start">60441 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-test after">
-                <span class="method-name">afterTest</span>
-                <span class="method-start">70081 ms</span>
+                <span class="method-start">56066 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

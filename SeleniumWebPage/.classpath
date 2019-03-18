@@ -32,5 +32,11 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-java-8.0.15.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Navin/Downloads/commons-io-2.6-bin/commons-io-2.6/commons-io-2.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Navin/Downloads/commons-io-2.6-bin/commons-io-2.6/commons-io-2.6-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Navin/Downloads/commons-io-2.6-bin/commons-io-2.6/commons-io-2.6-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Navin/Downloads/commons-io-2.6-bin/commons-io-2.6/commons-io-2.6-tests.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Navin/Downloads/commons-io-2.6-bin/commons-io-2.6/commons-io-2.6-test-sources.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

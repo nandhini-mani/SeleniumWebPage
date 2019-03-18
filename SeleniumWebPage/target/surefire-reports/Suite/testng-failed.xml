@@ -2,13 +2,53 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite verbose="0" name="Failed suite [Suite]" parallel="tests">
   <parameter name="browser" value="firefox"/>
-  <test name="firefoxTest(failed)" parallel="tests">
+  <test name="IETest(failed)" parallel="methods">
+    <parameter name="browser" value="ie"/>
+    <classes>
+      <class name="WebPage.HomePageTest">
+        <parameter name="browser" value="ie"/>
+        <methods>
+          <include name="VerifySearchOption" invocation-numbers="0"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- WebPage.HomePageTest -->
+    </classes>
+  </test> <!-- IETest(failed) -->
+  <test name="ChromeTest(failed)" parallel="methods">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="WebPage.HomePageTest">
+        <parameter name="browser" value="chrome"/>
+        <methods>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="VerifyHomePageLinks"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- WebPage.HomePageTest -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
+  <test name="firefoxTest(failed)" parallel="methods">
     <parameter name="browser" value="firefox"/>
     <classes>
       <class name="WebPage.HomePageTest">
+        <parameter name="browser" value="firefox"/>
         <methods>
-          <include name="VerifySearchOption"/>
+          <include name="VerifySearchOption" invocation-numbers="0"/>
           <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="VerifyHomePageLinks"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
           <include name="afterTest"/>
         </methods>
       </class> <!-- WebPage.HomePageTest -->

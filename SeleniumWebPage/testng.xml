@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite" parallel="tests">
+<suite name="Suite" thread-count="3" parallel="tests">
+
+   <test name="firefoxTest" >
+    <parameter name="browser" value="firefox" />
+      <classes>
+      <class name="WebPage.HomePageTest">
+      <methods>
+      	 <parameter name="browser" value="firefox" />
+      	 <include name="VerifySearchOption"></include>
+      </methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
   <test name="IETest">
     <parameter name="browser" value="ie" />
       <classes>
       <class name="WebPage.HomePageTest">
        <methods>
       	 <parameter name="browser" value="ie" />
+      	 <include name="VerifySearchOption"></include>
       </methods>
       </class>
     </classes>
@@ -17,17 +30,7 @@
       <class name="WebPage.HomePageTest">
        <methods>
       	 <parameter name="browser" value="chrome" />
-      </methods>
-      </class>
-    </classes>
-  </test> <!-- Test -->
-   <test name="firefoxTest">
-    <parameter name="browser" value="firefox" />
-      <classes>
-      <class name="WebPage.HomePageTest">
-      <methods>
-      	 <parameter name="browser" value="firefox" />
-      
+      	 <include name="VerifySearchOption"></include>
       </methods>
       </class>
     </classes>

@@ -5,6 +5,7 @@
     <classes>
       <class name="WebPage.HomePageTest">
         <methods>
+          <include name="VerifySearchOption"/>
           <include name="VerifyHomePageLinks"/>
         </methods>
       </class> <!-- WebPage.HomePageTest -->
