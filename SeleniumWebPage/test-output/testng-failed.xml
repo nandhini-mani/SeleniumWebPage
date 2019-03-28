@@ -1,47 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="3" name="Failed suite [Suite]" parallel="tests">
-  <parameter name="browser" value="chrome"/>
+  <parameter name="browser" value="ie"/>
   <test name="IETest(failed)" parallel="tests">
     <parameter name="browser" value="ie"/>
     <classes>
       <class name="WebPage.HomePageTest">
         <parameter name="browser" value="ie"/>
         <methods>
-          <include name="VerifySearchOption"/>
+          <include name="VerifySearchOption" invocation-numbers="0"/>
           <include name="beforeTest"/>
-          <include name="beforeTest"/>
-          <include name="beforeTest"/>
+          <include name="afterTest"/>
         </methods>
       </class> <!-- WebPage.HomePageTest -->
     </classes>
   </test> <!-- IETest(failed) -->
-  <test name="ChromeTest(failed)" parallel="tests">
-    <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="WebPage.HomePageTest">
-        <parameter name="browser" value="chrome"/>
-        <methods>
-          <include name="VerifySearchOption"/>
-          <include name="beforeTest"/>
-          <include name="beforeTest"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- WebPage.HomePageTest -->
-    </classes>
-  </test> <!-- ChromeTest(failed) -->
-  <test name="firefoxTest(failed)" parallel="tests">
-    <parameter name="browser" value="firefox"/>
-    <classes>
-      <class name="WebPage.HomePageTest">
-        <parameter name="browser" value="firefox"/>
-        <methods>
-          <include name="VerifySearchOption"/>
-          <include name="beforeTest"/>
-          <include name="beforeTest"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- WebPage.HomePageTest -->
-    </classes>
-  </test> <!-- firefoxTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -38,5 +38,6 @@
 	<classpathentry kind="lib" path="C:/Users/Navin/Downloads/commons-io-2.6-bin/commons-io-2.6/commons-io-2.6-sources.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Navin/Downloads/commons-io-2.6-bin/commons-io-2.6/commons-io-2.6-tests.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Navin/Downloads/commons-io-2.6-bin/commons-io-2.6/commons-io-2.6-test-sources.jar"/>
+	<classpathentry kind="lib" path="C:/selenium-java-3.141.59/ashot-1.5.4.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

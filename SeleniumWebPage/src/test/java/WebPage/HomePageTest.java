@@ -10,15 +10,18 @@ import org.testng.annotations.BeforeTest;
 
 import java.io.IOException;
 import java.io.File;
+import java.io.FileInputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -39,7 +42,9 @@ public class HomePageTest extends CommonFunc {
 	public WebDriver driver;
 	public CommonFunc snapshot ;
 	public static String screenshotPath = "C://selenium-java-3.141.59/Output/Screenshots/";
-	
+	//JavascriptExecutor js;
+	Properties prop;
+	public static int count =0;
 /*	
  * Test case 1 : To verify the hyperlinks present in Selenium Home page	 
  */
@@ -99,16 +104,32 @@ System.out.println("URL is either not configured for anchor tag or it is empty")
 	@Test(priority=1)
 	 @Parameters("browser") 
 	public void VerifySearchOption(String browser) throws InterruptedException, IOException{
+		FileInputStream file1 = new FileInputStream(System.getProperty("user.dir")+"\\object.properties");
+		prop.load(file1);
 		driver.get("https://www.seleniumhq.org/");
 		System.out.println("URL opened");
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
+		//Close the Ticker present at the top
+		if(driver.findElement(By.id("promo")).isDisplayed()){
+			driver.findElement(By.id("close")).click();
+		}
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
 		System.out.println("waited");
-		snapshot.Screenshot(driver, screenshotPath +"OpenUrl_"+browser+".png");
-		System.out.println("Took snapshot");
-		driver.findElement(By.id("q")).sendKeys("Webdriver");
-		snapshot.Screenshot(driver, screenshotPath +"EnterText_"+browser+".png");
-		System.out.println("Entered Webdriver in search option");
-		driver.findElement(By.xpath(".//input[@value='Go']")).click();
+		
+		//Scroll to the bottom of the webpage
+		JavascriptExecutor js = ((JavascriptExecutor)driver);
+		Thread.sleep(3000);
+		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+		Thread.sleep(5000);
+		//System.out.println("waited123");
+		//Scroll to the top of the page
+		js.executeScript("window.scrollTo(0, -document.body.scrollHeight)");
+		Thread.sleep(5000);
+		snapshot.Screenshot(driver, screenshotPath +"OpenUrl_"+browser+".png",browser);
+		//System.out.println("Took snapshot");
+		driver.findElement(By.id(prop.getProperty("q"))).sendKeys("Webdriver");
+		snapshot.Screenshot(driver, screenshotPath +"EnterText_"+browser+".png",browser);
+		driver.findElement(By.xpath(prop.getProperty("searchGoButton"))).click();
 		if(browser.equalsIgnoreCase("firefox")){
 			System.out.println("Handling alert message present in firefox browser");
 			Alert alert = driver.switchTo().alert();
@@ -118,7 +139,7 @@ System.out.println("URL is either not configured for anchor tag or it is empty")
 		Thread.sleep(5000);
 		String expectedTitle = "Google Custom Search";
 		String actualTitle = driver.getTitle();
-		snapshot.Screenshot(driver, screenshotPath +"GoogleSearch_"+browser+".png");
+		snapshot.Screenshot(driver, screenshotPath +"GoogleSearch_"+browser+".png",browser);
 		Assert.assertEquals(actualTitle, expectedTitle);
 		
 	}
@@ -128,21 +149,22 @@ System.out.println("URL is either not configured for anchor tag or it is empty")
   @BeforeTest
   @Parameters("browser") 
   public void beforeTest(String browser) throws IOException {
-	  	File f1 = new File(screenshotPath);
-	  	FileUtils.cleanDirectory(f1);
-	  	if(browser.equalsIgnoreCase("Chrome")){
+	  	prop = new Properties();
+		if(browser.equalsIgnoreCase("Chrome")){
 			//System.setProperty("webdriver.chrome.driver", "C:\\selenium-java-3.141.59\\Drivers\\chromedriver.exe");
 			//driver =new ChromeDriver();
 	  		ChromeOptions options = new ChromeOptions();
 	  		options.setCapability("platform", Platform.WINDOWS);
 			driver = new RemoteWebDriver(new URL("http://192.168.43.140:5566/wd/hub"),options);
 			driver.manage().window().maximize();
+			count++;
 		}else if(browser.equalsIgnoreCase("IE")){
 			//System.setProperty("webdriver.ie.driver", "C:\\selenium-java-3.141.59\\Drivers\\IEDriverServer.exe");
 			//driver =new InternetExplorerDriver();
 			InternetExplorerOptions options = new InternetExplorerOptions();
 			options.setCapability("platform", Platform.WINDOWS);
-			driver = new RemoteWebDriver(new URL("http://192.168.43.140:5566/wd/hub"),options);			
+			driver = new RemoteWebDriver(new URL("http://192.168.43.140:5566/wd/hub"),options);	
+			count++;
 		}else if(browser.equalsIgnoreCase("Firefox")){
 			//DesiredCapabilities capability = DesiredCapabilities.firefox();
 			//capability.setBrowserName("firefox");
@@ -152,9 +174,14 @@ System.out.println("URL is either not configured for anchor tag or it is empty")
 			FirefoxOptions options = new FirefoxOptions();
 			options.setCapability("platform", Platform.WINDOWS);
 			driver = new RemoteWebDriver(new URL("http://192.168.43.140:5566/wd/hub"),options);
+			count++;
 			
 		}
-	  
+	  	 //js = ((JavascriptExecutor)driver);
+		File f1 = new File(screenshotPath);
+		if(count==1){
+		FileUtils.cleanDirectory(f1);
+		}
   }
 
   @AfterTest
