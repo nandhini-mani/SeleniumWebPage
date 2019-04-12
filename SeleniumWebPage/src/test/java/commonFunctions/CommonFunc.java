@@ -22,7 +22,8 @@ public class CommonFunc {
 	
 	public static void Screenshot(WebDriver driver, String filePath,String browser) throws IOException{
 		//Screenshot fpScreenshot;
-		/*if(browser.equalsIgnoreCase("IE")){
+		//To capture full page screenshot
+		if(browser.equalsIgnoreCase("IE")){
 			 ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
          File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
          FileUtils.copyFile(scrFile, new File(filePath));
@@ -31,11 +32,12 @@ public class CommonFunc {
 			Screenshot fpScreenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver);
 		    ImageIO.write(fpScreenshot.getImage(),"PNG",new File(filePath));
 		}
-		*/
+		
+		/*
 		WebDriver augmentedDriver = new Augmenter().augment(driver);
 		File screenFile = ((TakesScreenshot) augmentedDriver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(screenFile, new File(filePath));
-		
+		*/
 	    //JavascriptExecutor js = ((JavascriptExecutor)driver);
 	    //js.executeScript("window.scrollTo(0, -document.body.scrollHeight)");
 	/*	TakesScreenshot s1 = ((TakesScreenshot)driver);

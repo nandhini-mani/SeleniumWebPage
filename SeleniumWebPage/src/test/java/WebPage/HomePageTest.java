@@ -127,7 +127,7 @@ System.out.println("URL is either not configured for anchor tag or it is empty")
 		Thread.sleep(5000);
 		snapshot.Screenshot(driver, screenshotPath +"OpenUrl_"+browser+".png",browser);
 		//System.out.println("Took snapshot");
-		driver.findElement(By.id(prop.getProperty("q"))).sendKeys("Webdriver");
+		driver.findElement(By.id(prop.getProperty("searchTextBox"))).sendKeys("Webdriver");
 		snapshot.Screenshot(driver, screenshotPath +"EnterText_"+browser+".png",browser);
 		driver.findElement(By.xpath(prop.getProperty("searchGoButton"))).click();
 		if(browser.equalsIgnoreCase("firefox")){

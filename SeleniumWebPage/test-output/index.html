@@ -53,7 +53,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Suite">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">3 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,6 +102,16 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="WebPage.HomePageTest" hash-for-method="VerifySearchOption(ie)">VerifySearchOption(ie)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="WebPage.HomePageTest" hash-for-method="VerifySearchOption(chrome)">VerifySearchOption(chrome)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="WebPage.HomePageTest" hash-for-method="VerifySearchOption(firefox)">VerifySearchOption(firefox)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -130,6 +140,22 @@
                   <span class="parameters">(ie)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="VerifySearchOption(chrome)">
+                  </a> <!-- VerifySearchOption(chrome) -->
+                  <span class="method-name">VerifySearchOption</span>
+                  <span class="parameters">(chrome)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="VerifySearchOption(firefox)">
+                  </a> <!-- VerifySearchOption(firefox) -->
+                  <span class="method-name">VerifySearchOption</span>
+                  <span class="parameters">(firefox)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
@@ -153,6 +179,28 @@
       &lt;/class&gt; &lt;!-- WebPage.HomePageTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- IETest --&gt;
+  &lt;test name=&quot;ChromeTest&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;WebPage.HomePageTest&quot;&gt;
+        &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;VerifySearchOption&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- WebPage.HomePageTest --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- ChromeTest --&gt;
+  &lt;test name=&quot;firefoxTest&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;WebPage.HomePageTest&quot;&gt;
+        &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;VerifySearchOption&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- WebPage.HomePageTest --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- firefoxTest --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -165,6 +213,12 @@
             <ul>
               <li>
                 <span class="test-name">IETest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">ChromeTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">firefoxTest (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -190,16 +244,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'VerifySearchOption')
 data.setCell(0, 2, 'WebPage.HomePageTest')
-data.setCell(0, 3, 23508);
+data.setCell(0, 3, 46302);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'VerifySearchOption')
+data.setCell(1, 2, 'WebPage.HomePageTest')
+data.setCell(1, 3, 45245);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'VerifySearchOption')
+data.setCell(2, 2, 'WebPage.HomePageTest')
+data.setCell(2, 3, 23947);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 23 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -214,12 +276,16 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">WebPage.HomePageTest</span>
               <div class="ignored-methods-div">
+                <span class="ignored-method-name">VerifyHomePageLinks</span>
+                <br/>
+                <span class="ignored-method-name">VerifyHomePageLinks</span>
+                <br/>
                 <span class="ignored-method-name">VerifyHomePageLinks</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
@@ -237,13 +303,37 @@ return data;
                 <span class="method-name">beforeTest(ie)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeTest(chrome)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-test before">
+                <span class="method-name">beforeTest(firefox)</span>
+                <span class="method-start">3 ms</span>
+              </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">VerifySearchOption(ie)</span>
-                <span class="method-start">2941 ms</span>
+                <span class="method-start">4313 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">VerifySearchOption(chrome)</span>
+                <span class="method-start">5474 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">26451 ms</span>
+                <span class="method-start">28264 ms</span>
+              </div> <!-- configuration-test after -->
+              <div class="test-method">
+                <span class="method-name">VerifySearchOption(firefox)</span>
+                <span class="method-start">30574 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">afterTest</span>
+                <span class="method-start">50721 ms</span>
+              </div> <!-- configuration-test after -->
+              <div class="configuration-test after">
+                <span class="method-name">afterTest</span>
+                <span class="method-start">76877 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
