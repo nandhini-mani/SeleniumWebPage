@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="77798" started-at="2019-04-12T07:30:06Z" finished-at="2019-04-12T07:31:24Z">
+  <suite name="Suite" duration-ms="20660" started-at="2019-04-15T16:47:59Z" finished-at="2019-04-15T16:48:19Z">
     <groups>
     </groups>
-    <test name="IETest" duration-ms="28288" started-at="2019-04-12T07:30:06Z" finished-at="2019-04-12T07:30:34Z">
+    <test name="IETest" duration-ms="8979" started-at="2019-04-15T16:47:59Z" finished-at="2019-04-15T16:48:08Z">
       <class name="WebPage.HomePageTest">
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:WebPage.HomePageTest@62ee68d8]" name="beforeTest" is-config="true" duration-ms="4299" started-at="2019-04-12T03:30:06Z" finished-at="2019-04-12T03:30:10Z">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:WebPage.HomePageTest@28d25987]" name="beforeTest" is-config="true" duration-ms="5172" started-at="2019-04-15T12:47:59Z" finished-at="2019-04-15T12:48:04Z">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="VerifySearchOption(java.lang.String)[pri:0, instance:WebPage.HomePageTest@62ee68d8]" name="VerifySearchOption" duration-ms="23947" started-at="2019-04-12T03:30:10Z" finished-at="2019-04-12T03:30:34Z">
+        <test-method status="PASS" signature="EditThisPageLink(java.lang.String)[pri:0, instance:WebPage.HomePageTest@28d25987]" name="EditThisPageLink" duration-ms="3771" started-at="2019-04-15T12:48:04Z" finished-at="2019-04-15T12:48:07Z">
           <params>
             <param index="0">
               <value>
@@ -28,16 +28,16 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifySearchOption -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:WebPage.HomePageTest@62ee68d8]" name="afterTest" is-config="true" duration-ms="14" started-at="2019-04-12T03:30:34Z" finished-at="2019-04-12T03:30:34Z">
+        </test-method> <!-- EditThisPageLink -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:WebPage.HomePageTest@28d25987]" name="afterTest" is-config="true" duration-ms="18" started-at="2019-04-15T12:48:07Z" finished-at="2019-04-15T12:48:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- WebPage.HomePageTest -->
     </test> <!-- IETest -->
-    <test name="ChromeTest" duration-ms="50782" started-at="2019-04-12T07:30:06Z" finished-at="2019-04-12T07:30:57Z">
+    <test name="ChromeTest" duration-ms="11358" started-at="2019-04-15T16:47:59Z" finished-at="2019-04-15T16:48:10Z">
       <class name="WebPage.HomePageTest">
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:WebPage.HomePageTest@28d25987]" name="beforeTest" is-config="true" duration-ms="5473" started-at="2019-04-12T03:30:06Z" finished-at="2019-04-12T03:30:12Z">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:WebPage.HomePageTest@5e5792a0]" name="beforeTest" is-config="true" duration-ms="6489" started-at="2019-04-15T12:47:59Z" finished-at="2019-04-15T12:48:05Z">
           <params>
             <param index="0">
               <value>
@@ -48,7 +48,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="VerifySearchOption(java.lang.String)[pri:0, instance:WebPage.HomePageTest@28d25987]" name="VerifySearchOption" duration-ms="45245" started-at="2019-04-12T03:30:12Z" finished-at="2019-04-12T03:30:57Z">
+        <test-method status="PASS" signature="EditThisPageLink(java.lang.String)[pri:0, instance:WebPage.HomePageTest@5e5792a0]" name="EditThisPageLink" duration-ms="4760" started-at="2019-04-15T12:48:05Z" finished-at="2019-04-15T12:48:10Z">
           <params>
             <param index="0">
               <value>
@@ -58,16 +58,16 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifySearchOption -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:WebPage.HomePageTest@28d25987]" name="afterTest" is-config="true" duration-ms="51" started-at="2019-04-12T03:30:57Z" finished-at="2019-04-12T03:30:57Z">
+        </test-method> <!-- EditThisPageLink -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:WebPage.HomePageTest@5e5792a0]" name="afterTest" is-config="true" duration-ms="101" started-at="2019-04-15T12:48:10Z" finished-at="2019-04-15T12:48:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- WebPage.HomePageTest -->
     </test> <!-- ChromeTest -->
-    <test name="firefoxTest" duration-ms="77793" started-at="2019-04-12T07:30:06Z" finished-at="2019-04-12T07:31:24Z">
+    <test name="firefoxTest" duration-ms="20660" started-at="2019-04-15T16:47:59Z" finished-at="2019-04-15T16:48:19Z">
       <class name="WebPage.HomePageTest">
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:WebPage.HomePageTest@5e5792a0]" name="beforeTest" is-config="true" duration-ms="30570" started-at="2019-04-12T03:30:06Z" finished-at="2019-04-12T03:30:37Z">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:WebPage.HomePageTest@62ee68d8]" name="beforeTest" is-config="true" duration-ms="15270" started-at="2019-04-15T12:47:59Z" finished-at="2019-04-15T12:48:14Z">
           <params>
             <param index="0">
               <value>
@@ -78,7 +78,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="VerifySearchOption(java.lang.String)[pri:0, instance:WebPage.HomePageTest@5e5792a0]" name="VerifySearchOption" duration-ms="46302" started-at="2019-04-12T03:30:37Z" finished-at="2019-04-12T03:31:23Z">
+        <test-method status="PASS" signature="EditThisPageLink(java.lang.String)[pri:0, instance:WebPage.HomePageTest@62ee68d8]" name="EditThisPageLink" duration-ms="4584" started-at="2019-04-15T12:48:14Z" finished-at="2019-04-15T12:48:18Z">
           <params>
             <param index="0">
               <value>
@@ -88,8 +88,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifySearchOption -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:WebPage.HomePageTest@5e5792a0]" name="afterTest" is-config="true" duration-ms="911" started-at="2019-04-12T03:31:23Z" finished-at="2019-04-12T03:31:24Z">
+        </test-method> <!-- EditThisPageLink -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:WebPage.HomePageTest@62ee68d8]" name="afterTest" is-config="true" duration-ms="798" started-at="2019-04-15T12:48:18Z" finished-at="2019-04-15T12:48:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->

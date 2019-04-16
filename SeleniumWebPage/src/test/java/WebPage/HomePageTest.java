@@ -51,7 +51,7 @@ public class HomePageTest extends CommonFunc {
 	@Test(priority=0)
   public void VerifyHomePageLinks(){
 		String url ="";
-		driver.get("https://www.seleniumhq.org/");
+		//driver.get("https://www.seleniumhq.org/");
 		
 		HttpURLConnection huc = null;
         int respCode = 200;
@@ -104,9 +104,9 @@ System.out.println("URL is either not configured for anchor tag or it is empty")
 	@Test(priority=1)
 	 @Parameters("browser") 
 	public void VerifySearchOption(String browser) throws InterruptedException, IOException{
-		FileInputStream file1 = new FileInputStream(System.getProperty("user.dir")+"\\object.properties");
-		prop.load(file1);
-		driver.get("https://www.seleniumhq.org/");
+		//FileInputStream file1 = new FileInputStream(System.getProperty("user.dir")+"\\object.properties");
+		//prop.load(file1);
+		//driver.get("https://www.seleniumhq.org/");
 		System.out.println("URL opened");
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
 		//Close the Ticker present at the top
@@ -125,10 +125,10 @@ System.out.println("URL is either not configured for anchor tag or it is empty")
 		//Scroll to the top of the page
 		js.executeScript("window.scrollTo(0, -document.body.scrollHeight)");
 		Thread.sleep(5000);
-		snapshot.Screenshot(driver, screenshotPath +"OpenUrl_"+browser+".png",browser);
+		snapshot.Screenshot(driver, screenshotPath +browser+"_OpenUrl"+".png",browser);
 		//System.out.println("Took snapshot");
 		driver.findElement(By.id(prop.getProperty("searchTextBox"))).sendKeys("Webdriver");
-		snapshot.Screenshot(driver, screenshotPath +"EnterText_"+browser+".png",browser);
+		snapshot.Screenshot(driver, screenshotPath +browser+"_EnterText"+".png",browser);
 		driver.findElement(By.xpath(prop.getProperty("searchGoButton"))).click();
 		if(browser.equalsIgnoreCase("firefox")){
 			System.out.println("Handling alert message present in firefox browser");
@@ -139,17 +139,145 @@ System.out.println("URL is either not configured for anchor tag or it is empty")
 		Thread.sleep(5000);
 		String expectedTitle = "Google Custom Search";
 		String actualTitle = driver.getTitle();
-		snapshot.Screenshot(driver, screenshotPath +"GoogleSearch_"+browser+".png",browser);
+		snapshot.Screenshot(driver, screenshotPath +browser+"_GoogleSearch"+".png",browser);
 		Assert.assertEquals(actualTitle, expectedTitle);
 		
 	}
 	
+	@Test(priority=2)
+	@Parameters("browser")
+	public void VerifyMenu_HomePage(String browser) throws IOException{
+		//Click on Projects tab/menu in Home page 
+		driver.findElement(By.id(prop.getProperty("menuProjects"))).click();
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
+		String expectedTitle = "Selenium Projects";
+		String actualTitle = driver.getTitle();
+		snapshot.Screenshot(driver, screenshotPath +browser+"_ProjectsMenu"+".png",browser);
+		Assert.assertEquals(actualTitle, expectedTitle);
+		//verify whether the text is present under projects
+		if(driver.findElement(By.id(prop.getProperty("projectText"))).isDisplayed()){
+			System.out.println("Text displayed under projects tab");
+		}else{
+			System.out.println("Text not present under projects tab");
+		}
+		driver.navigate().back();
+		
+		//Click on Download tab/menu in Home page
+		driver.findElement(By.id(prop.getProperty("menuDownload"))).click();
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
+		expectedTitle = "Downloads";
+		actualTitle = driver.getTitle();
+		snapshot.Screenshot(driver, screenshotPath +browser+"_DownloadsMenu"+".png",browser);
+		Assert.assertEquals(actualTitle, expectedTitle);
+		//verify whether the text is present under Downloads
+		if(driver.findElement(By.id(prop.getProperty("downloadText"))).isDisplayed()){
+			System.out.println("Text displayed under Download tab");
+		}else{
+			System.out.println("Text not present under Download tab");
+		}
+		driver.navigate().back();
+		
+		//Click on Documentation tab/menu in Home page 
+				driver.findElement(By.id(prop.getProperty("menuDocumentation"))).click();
+				driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
+				expectedTitle = "Selenium Documentation — Selenium Documentation";
+				actualTitle = driver.getTitle();
+				snapshot.Screenshot(driver, screenshotPath +browser+"_DocumentationMenu"+".png",browser);
+				Assert.assertEquals(actualTitle, expectedTitle);
+				//verify whether the text is present under projects
+				if(driver.findElement(By.id(prop.getProperty("documentText"))).isDisplayed()){
+					System.out.println("Text displayed under Documentation tab");
+				}else{
+					System.out.println("Text not present under Documentation tab");
+				}
+				driver.navigate().back();
+				
+				//Click on Support tab/menu in Home page 
+				driver.findElement(By.id(prop.getProperty("menuSupport"))).click();
+				driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
+				expectedTitle = "Getting Help";
+				actualTitle = driver.getTitle();
+				snapshot.Screenshot(driver, screenshotPath +browser+"_SupportMenu"+".png",browser);
+				Assert.assertEquals(actualTitle, expectedTitle);
+				//verify whether the text is present under projects
+				if(driver.findElement(By.id(prop.getProperty("supportText"))).isDisplayed()){
+					System.out.println("Text displayed under Support tab");
+				}else{
+					System.out.println("Text not present under Support tab");
+				}
+				driver.navigate().back();
+				
+				//Click on About tab/menu in Home page 
+				driver.findElement(By.id(prop.getProperty("menuAbout"))).click();
+				driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
+				expectedTitle = "About Selenium";
+				actualTitle = driver.getTitle();
+				snapshot.Screenshot(driver, screenshotPath +browser+"_AboutMenu"+".png",browser);
+				Assert.assertEquals(actualTitle, expectedTitle);
+				//verify whether the text is present under projects
+				if(driver.findElement(By.id(prop.getProperty("aboutText"))).isDisplayed()){
+					System.out.println("Text displayed under About tab");
+				}else{
+					System.out.println("Text not present under About tab");
+				}
+				driver.navigate().back();
+				
+	}
 	
+	@Test(priority=3)
+	@Parameters("browser")
+	public void Verify_Footer(String browser) throws IOException{
+				int count = 4;
+				//Verify the presence of Footer at the bottom
+				Assert.assertTrue(driver.findElement(By.id(prop.getProperty("footer"))).isDisplayed());
+				snapshot.Screenshot(driver, screenshotPath +browser+"_VerifyFooter"+".png",browser);
+				for (int i=1; i<=4;i++){
+					Assert.assertTrue((driver.findElement(By.xpath(prop.getProperty("footerSubHead["+i+"]")))).isDisplayed(),"Footer subheadings are displayed");
+					String s = driver.findElement(By.xpath(prop.getProperty("footerSubHead["+i+"]"))).getText();
+					if(s.equalsIgnoreCase("Documentation")){
+							count = 3;
+					}else{
+						count=4;
+					}
+					for(int j =1; j<=count;j++){
+						//System.out.println("HELLO"+i+" "+j);
+						Assert.assertTrue((driver.findElement(By.xpath(prop.getProperty("footerSubHead["+i+"]["+j+"]")))).isDisplayed(),s+" subheadings are displayed");
+					}
+				}
+				
+		}
+
+	@Test(priority=4)
+	@Parameters("browser")
+	public void Verify_sidebar(String browser) throws IOException{
+		//Verify the side bar present in home page, Projects page and Support page
+		Assert.assertTrue(driver.findElement(By.xpath(prop.getProperty("sidebar"))).isDisplayed());
+		for(int i= 1; i<5;i++){
+			driver.findElement(By.id(prop.getProperty("menu["+i+"]"))).click();
+			Assert.assertTrue(driver.findElement(By.xpath(prop.getProperty("sidebar"))).isDisplayed());
+			snapshot.Screenshot(driver, screenshotPath +browser+"_VerifySidebar"+".png",browser);
+			//System.out.println("sidebar"+i);
+			if(i==1)
+				i=3;
+		}
+	}
+	
+	@Test(priority=5)
+	@Parameters("browser")
+	public void EditThisPageLink(String browser) throws IOException{
+		driver.findElement(By.xpath(prop.getProperty("editThisPage"))).click();
+		String expectedTitle = "Sign in to GitHub · GitHub";
+		String actualTitle = driver.getTitle();
+		snapshot.Screenshot(driver, screenshotPath +browser+"_EditThisPage"+".png",browser);
+		Assert.assertEquals(actualTitle, expectedTitle);
+	}
 	
   @BeforeTest
   @Parameters("browser") 
   public void beforeTest(String browser) throws IOException {
 	  	prop = new Properties();
+	  	FileInputStream file1 = new FileInputStream(System.getProperty("user.dir")+"\\object.properties");
+		prop.load(file1);
 		if(browser.equalsIgnoreCase("Chrome")){
 			//System.setProperty("webdriver.chrome.driver", "C:\\selenium-java-3.141.59\\Drivers\\chromedriver.exe");
 			//driver =new ChromeDriver();
@@ -158,6 +286,7 @@ System.out.println("URL is either not configured for anchor tag or it is empty")
 			driver = new RemoteWebDriver(new URL("http://192.168.43.140:5566/wd/hub"),options);
 			driver.manage().window().maximize();
 			count++;
+			//driver.get("https://www.seleniumhq.org/");
 		}else if(browser.equalsIgnoreCase("IE")){
 			//System.setProperty("webdriver.ie.driver", "C:\\selenium-java-3.141.59\\Drivers\\IEDriverServer.exe");
 			//driver =new InternetExplorerDriver();
@@ -165,6 +294,7 @@ System.out.println("URL is either not configured for anchor tag or it is empty")
 			options.setCapability("platform", Platform.WINDOWS);
 			driver = new RemoteWebDriver(new URL("http://192.168.43.140:5566/wd/hub"),options);	
 			count++;
+			//driver.get("https://www.seleniumhq.org/");
 		}else if(browser.equalsIgnoreCase("Firefox")){
 			//DesiredCapabilities capability = DesiredCapabilities.firefox();
 			//capability.setBrowserName("firefox");
@@ -175,8 +305,9 @@ System.out.println("URL is either not configured for anchor tag or it is empty")
 			options.setCapability("platform", Platform.WINDOWS);
 			driver = new RemoteWebDriver(new URL("http://192.168.43.140:5566/wd/hub"),options);
 			count++;
-			
+			//driver.get("https://www.seleniumhq.org/");
 		}
+		driver.get("https://www.seleniumhq.org/");
 	  	 //js = ((JavascriptExecutor)driver);
 		File f1 = new File(screenshotPath);
 		if(count==1){

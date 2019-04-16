@@ -101,17 +101,17 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="WebPage.HomePageTest" hash-for-method="VerifySearchOption(ie)">VerifySearchOption(ie)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="WebPage.HomePageTest" hash-for-method="EditThisPageLink(ie)">EditThisPageLink(ie)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="WebPage.HomePageTest" hash-for-method="VerifySearchOption(chrome)">VerifySearchOption(chrome)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="WebPage.HomePageTest" hash-for-method="EditThisPageLink(chrome)">EditThisPageLink(chrome)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="WebPage.HomePageTest" hash-for-method="VerifySearchOption(firefox)">VerifySearchOption(firefox)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="WebPage.HomePageTest" hash-for-method="EditThisPageLink(firefox)">EditThisPageLink(firefox)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -134,25 +134,25 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="VerifySearchOption(ie)">
-                  </a> <!-- VerifySearchOption(ie) -->
-                  <span class="method-name">VerifySearchOption</span>
+                  <a name="EditThisPageLink(ie)">
+                  </a> <!-- EditThisPageLink(ie) -->
+                  <span class="method-name">EditThisPageLink</span>
                   <span class="parameters">(ie)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="VerifySearchOption(chrome)">
-                  </a> <!-- VerifySearchOption(chrome) -->
-                  <span class="method-name">VerifySearchOption</span>
+                  <a name="EditThisPageLink(chrome)">
+                  </a> <!-- EditThisPageLink(chrome) -->
+                  <span class="method-name">EditThisPageLink</span>
                   <span class="parameters">(chrome)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="VerifySearchOption(firefox)">
-                  </a> <!-- VerifySearchOption(firefox) -->
-                  <span class="method-name">VerifySearchOption</span>
+                  <a name="EditThisPageLink(firefox)">
+                  </a> <!-- EditThisPageLink(firefox) -->
+                  <span class="method-name">EditThisPageLink</span>
                   <span class="parameters">(firefox)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -168,13 +168,24 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite thread-count=&quot;3&quot; name=&quot;Suite&quot; parallel=&quot;tests&quot;&gt;
+  &lt;test name=&quot;firefoxTest&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;WebPage.HomePageTest&quot;&gt;
+        &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;EditThisPageLink&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- WebPage.HomePageTest --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- firefoxTest --&gt;
   &lt;test name=&quot;IETest&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;ie&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;WebPage.HomePageTest&quot;&gt;
         &lt;parameter name=&quot;browser&quot; value=&quot;ie&quot;/&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;VerifySearchOption&quot;/&gt;
+          &lt;include name=&quot;EditThisPageLink&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- WebPage.HomePageTest --&gt;
     &lt;/classes&gt;
@@ -185,22 +196,11 @@
       &lt;class name=&quot;WebPage.HomePageTest&quot;&gt;
         &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;VerifySearchOption&quot;/&gt;
+          &lt;include name=&quot;EditThisPageLink&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- WebPage.HomePageTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- ChromeTest --&gt;
-  &lt;test name=&quot;firefoxTest&quot;&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;WebPage.HomePageTest&quot;&gt;
-        &lt;parameter name=&quot;browser&quot; value=&quot;firefox&quot;/&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;VerifySearchOption&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- WebPage.HomePageTest --&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- firefoxTest --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -212,13 +212,13 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
+                <span class="test-name">firefoxTest (1 class)</span>
+              </li>
+              <li>
                 <span class="test-name">IETest (1 class)</span>
               </li>
               <li>
                 <span class="test-name">ChromeTest (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">firefoxTest (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -246,22 +246,22 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'VerifySearchOption')
+data.setCell(0, 1, 'EditThisPageLink')
 data.setCell(0, 2, 'WebPage.HomePageTest')
-data.setCell(0, 3, 46302);
+data.setCell(0, 3, 4760);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'VerifySearchOption')
+data.setCell(1, 1, 'EditThisPageLink')
 data.setCell(1, 2, 'WebPage.HomePageTest')
-data.setCell(1, 3, 45245);
+data.setCell(1, 3, 4584);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'VerifySearchOption')
+data.setCell(2, 1, 'EditThisPageLink')
 data.setCell(2, 2, 'WebPage.HomePageTest')
-data.setCell(2, 3, 23947);
+data.setCell(2, 3, 3771);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 13 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -276,17 +276,41 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">3 ignored methods</span>
+            <span class="header-content">15 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">WebPage.HomePageTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">VerifyHomePageLinks</span>
+                <span class="ignored-method-name">Verify_Footer</span>
+                <br/>
+                <span class="ignored-method-name">Verify_Footer</span>
+                <br/>
+                <span class="ignored-method-name">Verify_Footer</span>
                 <br/>
                 <span class="ignored-method-name">VerifyHomePageLinks</span>
                 <br/>
                 <span class="ignored-method-name">VerifyHomePageLinks</span>
+                <br/>
+                <span class="ignored-method-name">VerifyHomePageLinks</span>
+                <br/>
+                <span class="ignored-method-name">VerifySearchOption</span>
+                <br/>
+                <span class="ignored-method-name">VerifySearchOption</span>
+                <br/>
+                <span class="ignored-method-name">VerifySearchOption</span>
+                <br/>
+                <span class="ignored-method-name">Verify_sidebar</span>
+                <br/>
+                <span class="ignored-method-name">Verify_sidebar</span>
+                <br/>
+                <span class="ignored-method-name">Verify_sidebar</span>
+                <br/>
+                <span class="ignored-method-name">VerifyMenu_HomePage</span>
+                <br/>
+                <span class="ignored-method-name">VerifyMenu_HomePage</span>
+                <br/>
+                <span class="ignored-method-name">VerifyMenu_HomePage</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -305,35 +329,35 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest(chrome)</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">1 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest(firefox)</span>
-                <span class="method-start">3 ms</span>
+                <span class="method-start">1 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">VerifySearchOption(ie)</span>
-                <span class="method-start">4313 ms</span>
+                <span class="method-name">EditThisPageLink(ie)</span>
+                <span class="method-start">5183 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">VerifySearchOption(chrome)</span>
-                <span class="method-start">5474 ms</span>
+                <span class="method-name">EditThisPageLink(chrome)</span>
+                <span class="method-start">6491 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">28264 ms</span>
-              </div> <!-- configuration-test after -->
-              <div class="test-method">
-                <span class="method-name">VerifySearchOption(firefox)</span>
-                <span class="method-start">30574 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-test after">
-                <span class="method-name">afterTest</span>
-                <span class="method-start">50721 ms</span>
+                <span class="method-start">8956 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">76877 ms</span>
+                <span class="method-start">11252 ms</span>
+              </div> <!-- configuration-test after -->
+              <div class="test-method">
+                <span class="method-name">EditThisPageLink(firefox)</span>
+                <span class="method-start">15271 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">afterTest</span>
+                <span class="method-start">19857 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

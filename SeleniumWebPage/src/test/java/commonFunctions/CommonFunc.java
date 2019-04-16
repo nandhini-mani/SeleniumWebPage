@@ -24,7 +24,7 @@ public class CommonFunc {
 		//Screenshot fpScreenshot;
 		//To capture full page screenshot
 		if(browser.equalsIgnoreCase("IE")){
-			 ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
+			// ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
          File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
          FileUtils.copyFile(scrFile, new File(filePath));
 		}else{
