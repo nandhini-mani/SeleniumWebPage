@@ -1,19 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 27.25 sec <<< FAILURE!
-VerifyMenu_HomePage(WebPage.HomePageTest)  Time elapsed: 0.007 sec  <<< FAILURE!
-java.lang.IllegalArgumentException: Cannot find elements when the XPath is null.
-	at org.openqa.selenium.By$ByXPath.<init>(By.java:339)
-	at org.openqa.selenium.By.xpath(By.java:92)
-	at WebPage.HomePageTest.VerifyMenu_HomePage(HomePageTest.java:153)
-VerifyMenu_HomePage(WebPage.HomePageTest)  Time elapsed: 0 sec  <<< FAILURE!
-java.lang.IllegalArgumentException: Cannot find elements when the XPath is null.
-	at org.openqa.selenium.By$ByXPath.<init>(By.java:339)
-	at org.openqa.selenium.By.xpath(By.java:92)
-	at WebPage.HomePageTest.VerifyMenu_HomePage(HomePageTest.java:153)
-VerifyMenu_HomePage(WebPage.HomePageTest)  Time elapsed: 0 sec  <<< FAILURE!
-java.lang.IllegalArgumentException: Cannot find elements when the XPath is null.
-	at org.openqa.selenium.By$ByXPath.<init>(By.java:339)
-	at org.openqa.selenium.By.xpath(By.java:92)
-	at WebPage.HomePageTest.VerifyMenu_HomePage(HomePageTest.java:153)
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 42.375 sec

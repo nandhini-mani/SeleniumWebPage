@@ -147,6 +147,45 @@ System.out.println("URL is either not configured for anchor tag or it is empty")
 	@Test(priority=2)
 	@Parameters("browser")
 	public void VerifyMenu_HomePage(String browser) throws IOException{
+		
+		for(int i=1;i<6;i++){
+			driver.findElement(By.id(prop.getProperty("menu["+i+"]"))).click();
+			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
+			String expectedTitle="";
+			switch(i)
+			{
+				case 1 :
+					expectedTitle = "Selenium Projects";
+					break;
+					
+				case 2 :
+					expectedTitle = "Downloads";
+					break;
+					
+				case 3 :
+					expectedTitle = "Selenium Documentation — Selenium Documentation";
+					break;
+					
+				case 4 :
+					expectedTitle = "Getting Help";
+					break;
+					
+				case 5 :
+					expectedTitle = "About Selenium";
+					break;
+					
+			}	
+			String actualTitle = driver.getTitle();
+			snapshot.Screenshot(driver, screenshotPath +browser+"_Menu_"+i+".png",browser);
+			Assert.assertEquals(actualTitle, expectedTitle);
+			if(driver.findElement(By.id(prop.getProperty("menuText"))).isDisplayed()){
+				System.out.println("Text displayed");
+			}else{
+				System.out.println("Text not present");
+			}
+			driver.navigate().back();
+		}
+		/*
 		//Click on Projects tab/menu in Home page 
 		driver.findElement(By.id(prop.getProperty("menuProjects"))).click();
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
@@ -221,7 +260,7 @@ System.out.println("URL is either not configured for anchor tag or it is empty")
 					System.out.println("Text not present under About tab");
 				}
 				driver.navigate().back();
-				
+		*/		
 	}
 	
 	@Test(priority=3)

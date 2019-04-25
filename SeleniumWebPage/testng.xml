@@ -2,36 +2,35 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" thread-count="3" parallel="tests">
 
-
    <test name="firefoxTest" >
     <parameter name="browser" value="firefox" />
       <classes>
       <class name="WebPage.HomePageTest">
       <methods>
       	 <parameter name="browser" value="firefox" />
-      	 <include name="EditThisPageLink"></include>
+      	 <include name="VerifyMenu_HomePage"></include>
       </methods>
       </class>
     </classes>
   </test> <!-- Test -->  
+    <test name="ChromeTest">
+    <parameter name="browser" value="chrome" />
+      <classes>
+      <class name="WebPage.HomePageTest">
+       <methods>
+      	 <parameter name="browser" value="chrome" />
+      	  <include name="VerifyMenu_HomePage"></include>
+      </methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
   <test name="IETest">
     <parameter name="browser" value="ie" />
       <classes>
       <class name="WebPage.HomePageTest">
        <methods>
       	 <parameter name="browser" value="ie" />
-      	 <include name="EditThisPageLink"></include>
-      </methods>
-      </class>
-    </classes>
-  </test> <!-- Test -->
-  <test name="ChromeTest">
-    <parameter name="browser" value="chrome" />
-      <classes>
-      <class name="WebPage.HomePageTest">
-       <methods>
-      	 <parameter name="browser" value="chrome" />
-      	  <include name="EditThisPageLink"></include>
+      	 <include name="VerifyMenu_HomePage"></include>
       </methods>
       </class>
     </classes>
