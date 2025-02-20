@@ -19,7 +19,7 @@ import javax.imageio.ImageIO;
 import com.google.common.io.Files;
 
 public class CommonFunc {
-	
+	//to check git
 	public static void Screenshot(WebDriver driver, String filePath,String browser) throws IOException{
 		//Screenshot fpScreenshot;
 		//To capture full page screenshot
